@@ -7,13 +7,14 @@ CTAGS = /usr/bin/ctags
 RM =  /bin/rm
 CP = /bin/cp
 ALL: tags kooltalk 
-kooltalk: 
-	$(CC) -o kooltalk kooltalk.c
-	$(STRIP) kooltalk
+
+kooltalk: kooltalk.o
+	$(CC) -o $@ $^
+	$(STRIP) $@  
 tags: 
 	$(CTAGS) kooltalk.c
 clean: 
-	$(RM) kooltalk tags
+	$(RM) kooltalk tags *.o
 install: 
 	$(CP) kooltalk $(INSTDIR)
 	$(CP) kooltalk.1 $(MANDIR)/man1
