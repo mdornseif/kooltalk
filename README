@@ -1,0 +1,27 @@
+This  is  kooltalk  v2.1,  a  simple text  filter  that  will  transform
+sentences like this:
+
+ 	"the quick brown fox jumps over the lazy dog"
+
+into something like this:
+
+ 	"+HE (,)U1C|< BR0\/\/|\| /=()X j(_)mPS ()V3R ~|~H[- LA~/_v/ D()9"
+
+or, as an option, into something like this:
+
+ 	"th3 qu1ck br0wn ph0x jumpz 0v3r th3 lazy d0g"
+
+If usable at  all, kooltalk will be of some  use when impressing wannabe
+hackers.
+
+INSTALLATION:
+
+Check out  the Makefile and change  the paths to your  machine's values.
+Run 'make'. Become root and run 'make  install'. Be sure to read the man
+page. I think it's funny.
+
+NOTE:
+
+Kooltalk was written for Linux. Porting it to any other UNIXish platform
+shouldn't  be a  problem, though.  You might  want to  change the  lines
+dealing with srand(3) and time(2) in main().
